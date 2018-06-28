@@ -1,0 +1,36 @@
+{
+  "name": "elastail",
+  "version": "1.0.0",
+  "description": "ElasticSearch Tail",
+  "main": "elastail.js",
+  "bin": {
+    "elastail": "elastail.js",
+    "nocolor": "./node_modules/strip-ansi-cli/cli.js",
+    "elastail_logstash": "./bin/elastail_logstash"
+  },
+  "dependencies": {
+    "ansi-regex": "^3.0.0",
+    "cli-color": "^1.2.0",
+    "elasticsearch": "^14.0.0",
+    "lodash": "^4.17.4",
+    "markup-js": ">=1.5.21",
+    "minimist": "^1.2.0",
+    "moment": "^2.20.1",
+    "strip-ansi-cli": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.magicleap.com/jholder/elastail"
+  },
+  "keywords": [
+    "elasticsearch",
+    "elastic",
+    "tail"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}

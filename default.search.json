@@ -1,0 +1,30 @@
+{
+  "index": "{{index}}",
+  "scroll": "30s",
+  "search_type": "dfs_query_then_fetch",
+  "size": {{fetchsize}},
+  "body": {
+    "query": {
+      "bool": {
+        "must": [{
+          "range": {
+            "@timestamp": {
+              "gt": "{{from}}",
+              "to": "now"
+            }
+          }
+        },
+        {
+          "query_string" : {
+          "query" : "{{querystring}}"
+          }
+        }]
+      }
+    },
+    "sort": {
+      "@timestamp": {
+        "order": "asc"
+      }
+    }
+  }
+}
